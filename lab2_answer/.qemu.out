@@ -1,0 +1,54 @@
+(THU.CST) os is loading ...
+
+Special kernel symbols:
+  entry  0xc010002a (phys)
+  etext  0xc0105d2b (phys)
+  edata  0xc0118a36 (phys)
+  end    0xc0119968 (phys)
+Kernel executable memory footprint: 103KB
+ebp:0xc0117f48 eip:0xc0100a61 arg:0x00010094 0x00010094 0xc0117f78 0xc01000ae 
+    kern/debug/kdebug.c:309: print_stackframe+21
+ebp:0xc0117f58 eip:0xc0100d6d arg:0x00000000 0x00000000 0x00000000 0xc0117fc8 
+    kern/debug/kmonitor.c:129: mon_backtrace+10
+ebp:0xc0117f78 eip:0xc01000ae arg:0x00000000 0xc0117fa0 0xffff0000 0xc0117fa4 
+    kern/init/init.c:49: grade_backtrace2+19
+ebp:0xc0117f98 eip:0xc01000d0 arg:0x00000000 0xffff0000 0xc0117fc4 0x0000002a 
+    kern/init/init.c:54: grade_backtrace1+27
+ebp:0xc0117fb8 eip:0xc01000ed arg:0x00000000 0xc010002a 0xffff0000 0xc010006d 
+    kern/init/init.c:59: grade_backtrace0+19
+ebp:0xc0117fd8 eip:0xc010010e arg:0x00000000 0x00000000 0x00000000 0xc0105d40 
+    kern/init/init.c:64: grade_backtrace+26
+ebp:0xc0117ff8 eip:0xc010007a arg:0x00000000 0x00000000 0x0000ffff 0x40cf9a00 
+    kern/init/init.c:29: kern_init+79
+memory management: default_pmm_manager
+e820map:
+  memory: 0009fc00, [00000000, 0009fbff], type = 1.
+  memory: 00000400, [0009fc00, 0009ffff], type = 2.
+  memory: 00010000, [000f0000, 000fffff], type = 2.
+  memory: 07ee0000, [00100000, 07fdffff], type = 1.
+  memory: 00020000, [07fe0000, 07ffffff], type = 2.
+  memory: 00040000, [fffc0000, ffffffff], type = 2.
+check_alloc_page() succeeded!
+check_pgdir() succeeded!
+check_boot_pgdir() succeeded!
+-------------------- BEGIN --------------------
+PDE(0e0) c0000000-f8000000 38000000 urw
+  |-- PTE(38000) c0000000-f8000000 38000000 -rw
+PDE(001) fac00000-fb000000 00400000 -rw
+  |-- PTE(000e0) faf00000-fafe0000 000e0000 urw
+  |-- PTE(00001) fafeb000-fafec000 00001000 -rw
+--------------------- END ---------------------
+++ setup timer interrupts
+0: @ring 0
+0:  cs = 8
+0:  ds = 10
+0:  es = 10
+0:  ss = 10
++++ switch to  user  mode +++
+100 ticks
+End of Test.
+kernel panic at kern/trap/trap.c:18:
+    EOT: kernel seems ok.
+Welcome to the kernel debug monitor!!
+Type 'help' for a list of commands.
+K> 
